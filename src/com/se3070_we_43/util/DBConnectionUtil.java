@@ -1,0 +1,35 @@
+package com.se3070_we_43.util;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+/**
+ * The Class DBConnectionUtil.
+ */
+public class DBConnectionUtil extends CommonUtil {
+
+    /**
+     * The connection.
+     */
+    private static Connection connection;
+
+    /**
+     * Gets the DB connection.
+     *
+     * @return the DB connection
+     * @throws ClassNotFoundException the class not found exception
+     * @throws SQLException           the SQL exception
+     */
+    public static Connection getDBConnection() throws ClassNotFoundException, SQLException {
+        /*
+         * This creates new connection objects when connection is closed, or it is null
+         */
+        if (connection == null || connection.isClosed()) {
+
+            Class.forName(properties.getProperty(Constants.DRIVER_NAME));
+            connection = DriverManager.getConnection(properties.getProperty(Constants.URL), properties.getProperty(Constants.USERNAME), properties.getProperty(Constants.PASSWORD));
+        }
+        return connection;
+    }
+}
