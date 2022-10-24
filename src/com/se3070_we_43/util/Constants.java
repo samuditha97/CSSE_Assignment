@@ -90,7 +90,26 @@ public class Constants {
     /**
      * Constant for get xml data path
      */
-    public static final String EMPLOYEE_PATH = "//Employees/Employee[";
+    public static final String EMPLOYEE_PATH = "//Employees/Employee";
+
+    /** Constant for employee id. */
+    public static final String EMPLOYEE_ID = "EmployeeID";
+
+    /** Constant for full name. */
+    public static final String EMPLOYEE_FULL_NAME = "EmployeeFullName";
+
+    /** Constant for address. */
+    public static final String EMPLOYEE_FULL_ADDRESS = "EmployeeFullAddress";
+
+    /** Constant for faculty name. */
+    public static final String FACULTY_NAME = "FacultyName";
+
+    /** Constant for department. */
+    public static final String DEPARTMENT = "Department";
+
+    /** Constant for designation. */
+    public static final String DESIGNATION = "Designation";
+
 
 }
 
